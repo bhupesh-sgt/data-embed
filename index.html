@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Flourish Embed</title>
+<title>Datawrapper Embed</title>
 <style>
   body { margin:0; }
   iframe { width:100%; height:650px; border:0; }
@@ -10,14 +10,15 @@
 </head>
 <body>
 
-<iframe id="viz"></iframe>
+<iframe id="dwchart"></iframe>
 
 <script>
   const params = new URLSearchParams(window.location.search);
   const id = params.get("id");
+
   if (id) {
-    document.getElementById("viz").src =
-      "https://public.flourish.studio/visualisation/" + id + "/embed";
+    document.getElementById("dwchart").src =
+      "https://datawrapper.dwcdn.net/" + id + "/1/";
   }
 </script>
 
